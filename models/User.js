@@ -1,8 +1,8 @@
-const mongoose = require("mongoose");
+import { Schema, model } from "mongoose";
 
 // Create the user schema.
 // When we request a user from the Database. these are the details we can get.
-const UserSchema = new mongoose.Schema({
+const UserSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -25,4 +25,4 @@ const UserSchema = new mongoose.Schema({
     }
 });
 
-module.exports = User = mongoose.model("User", UserSchema);
+export default User = model("User", UserSchema);

@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "server": "nodemon server"
+    "server": "nodemon server",
+    "test": "jest --watchAll --verbose"
   },
   "author": "Josh Hiles",
   "license": "MIT",
@@ -15,11 +16,13 @@
     "express": "^4.17.1",
     "express-validator": "^6.11.1",
     "gravatar": "^1.8.1",
+    "jest": "^27.0.4",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.13",
     "request": "^2.88.2"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.23",
     "concurrently": "^6.2.0",
     "nodemon": "^2.0.7"
   }
