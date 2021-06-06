@@ -6,6 +6,9 @@ const app = express();
 // Connect database
 connectDB();
 
+// Initialise middleware (a request body parser)
+app.use(express.json({ extended: false }))
+
 app.get("/", (req, res) => res.send("API running."));
 
 // Define routes for endpoints - where these defined endpoints will point to in my file structure.
