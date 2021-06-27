@@ -1,14 +1,14 @@
-import { Schema, model } from "mongoose";
+const mongoose = require("mongoose");
 
 // Create the user schema.
 // When we request a user from the Database. these are the details we can get.
-const UserSchema = new Schema({
+const UserSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true
     },
     email: {
-        type: String.apply,
+        type: String,
         required: true,
         unique: true
     },
@@ -25,4 +25,4 @@ const UserSchema = new Schema({
     }
 });
 
-export default User = model("User", UserSchema);
+module.exports = User = mongoose.model("user", UserSchema);
